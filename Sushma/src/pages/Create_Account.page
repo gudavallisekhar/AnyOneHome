@@ -1,0 +1,25 @@
+<apex:page controller="Create_Account"  >
+    
+    <apex:form >
+    
+        <apex:pageBlock id="load">
+			<apex:pageBlockButtons location="top" >
+            	<apex:commandButton value="Save" action="{!Save_Record}" reRender="load" />
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection >
+            
+                <apex:inputText label="Account Name" required="true" value="{!acc_name}"  />
+                <apex:inputText label="Phone Number" required="true" value="{!acc_phone}" />
+                <apex:inputText label="Please Enter City" required="true" value="{!acc_city}" />
+                <apex:outputText value="{!ins_message}" />
+                
+        
+            </apex:pageBlockSection>
+            
+            
+        </apex:pageBlock>
+    
+    </apex:form>
+    
+</apex:page>

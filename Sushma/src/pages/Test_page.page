@@ -1,0 +1,4 @@
+<apex:page controller="Test_page">
+ {!$Label.vpage_data}
+ {!message}
+</apex:page>

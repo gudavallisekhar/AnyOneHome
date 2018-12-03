@@ -1,0 +1,3 @@
+<aura:component implements="force:appHostable">
+	<h1>Hello Gudavalli Naga Sushma</h1>
+</aura:component>

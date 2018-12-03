@@ -1,0 +1,24 @@
+<apex:page controller="Create_Account" >
+ 	<script>
+    function callme_GCS(){  Java_Script_call(); }
+    callme_GCS();
+    </script>
+   <apex:form >
+    
+       <apex:pageBlock >
+       <apex:actionFunction name="Java_Script_call" action="{!Display_Records}" />
+           
+           <apex:pageBlockTable value="{!list_acc}" var="abc">
+               <apex:column value="{!abc.name}"  />
+           </apex:pageBlockTable>
+           
+           <apex:actionPoller action="{!Dateret}" interval="5" reRender="dte" />
+           <apex:outputLabel value="{!result}" id="dte" />
+           
+           
+       </apex:pageBlock>
+    
+   </apex:form>  
+  
+    
+</apex:page>

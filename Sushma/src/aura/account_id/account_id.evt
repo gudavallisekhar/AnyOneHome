@@ -1,0 +1,6 @@
+<aura:event type="COMPONENT" description="Event template" >
+
+    <aura:attribute name="accinfo" type="String" />
+    <aura:attribute name="accinfoa" type="String" />
+
+</aura:event>

@@ -1,0 +1,43 @@
+<apex:page controller="Create_Account" readOnly="true" tabStyle="Account" >
+    <apex:sectionHeader title="List of Records" />
+    <apex:pageBlock >
+        <apex:pageBlockSection title="Page Block Table" columns="1" collapsible="false" >
+            <apex:pageBlockTable value="{!list_acc}" var="acc">
+            <apex:column value="{!acc.name}" />
+            <apex:column value="{!acc.phone}" />
+            <apex:column value="{!acc.type}" />
+            <apex:column value="{!acc.billingcity}" />
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Data Table" columns="1" collapsible="false">
+        	<apex:dataTable value="{!list_acc}" var="acc">
+            <apex:column value="{!acc.name}" />
+            <apex:column value="{!acc.phone}" />
+            <apex:column value="{!acc.type}" />
+            <apex:column value="{!acc.billingcity}" />
+        </apex:dataTable>
+        </apex:pageBlockSection>
+        
+         <apex:pageBlockSection title="Data List" columns="1" collapsible="false">
+        	<apex:dataList value="{!list_acc}" var="acc">
+                {!acc.name}{!acc.phone}{!acc.type}{!acc.billingcity}
+        </apex:dataList>
+        </apex:pageBlockSection>
+        
+         <apex:pageBlockSection title="Repeat" columns="1" collapsible="true">
+        	<apex:repeat value="{!list_acc}" var="acc">
+                {!acc.name}{!acc.phone}{!acc.type}{!acc.billingcity}
+        </apex:repeat>
+        </apex:pageBlockSection>
+        
+        
+        
+    </apex:pageBlock>
+    
+    
+    
+    
+    
+    
+</apex:page>

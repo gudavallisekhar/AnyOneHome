@@ -1,0 +1,26 @@
+<apex:page controller="Propery_Search" >
+    <apex:sectionHeader title="Property Search" subtitle="Any One Home" />
+    <apex:form >
+        <apex:pageBlock >
+        
+            <apex:pageBlockSection >
+                <apex:inputText value="{!search_key}" label="Search by City" >
+                    <apex:actionSupport event="onkeyup"  action="{!Search_records}"  reRender="mysearch" />
+                </apex:inputText>
+               
+            </apex:pageBlockSection>
+            <apex:pageBlockSection id="mysearch" columns="1" title="Result List on key {!search_key}">
+         	
+                <apex:pageBlockTable value="{!property}" var="mylist">
+                    <apex:column value="{!mylist.City__c}" />
+                    <apex:column value="{!mylist.Contact__r.name}" />
+                    <apex:column value="{!mylist.Property_Name__c}" />
+                    <apex:column value="{!mylist.Propert_Cost__c}" />
+                    <apex:column value="{!mylist.Property_Logo__c}"  style="width:75px;" />
+                </apex:pageBlockTable>
+            
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

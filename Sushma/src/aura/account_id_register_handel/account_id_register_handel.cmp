@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="kee" type="String" />
+    <aura:handler name="actfire"  event="c:account_id" action="{!c.valli}" />
+    {!v.kee}
+	<c:account_id_register />
+</aura:component>

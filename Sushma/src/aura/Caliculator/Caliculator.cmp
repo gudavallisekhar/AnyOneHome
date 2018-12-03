@@ -1,0 +1,12 @@
+<aura:component >
+    <aura:handler name="init" value="{!this}" action="{!c.initval}" />
+    <aura:attribute name="titak" type="String" />
+    <lightning:card title="Caliculation" iconName="standard:Account" >
+        <lightning:input type="text" aura:id="avalue"  default="abc"  />
+        <lightning:input type="text" aura:id="bvalue"   />
+		{!v.titak}
+        <aura:set attribute="actions">
+        <lightning:button label="Caluculation" onclick="{!c.calc}"  />
+        </aura:set>
+    </lightning:card>
+</aura:component>

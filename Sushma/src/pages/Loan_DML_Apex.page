@@ -1,0 +1,28 @@
+<apex:page controller="Loan_DML_Apex" >
+    
+    <apex:form >
+        
+        	<apex:pageBlock id="load">
+    		 <apex:pageBlockButtons location="top" >
+                 <apex:commandButton value="Search" action="{!search_val}" reRender="load" />
+                 <apex:commandButton value="AssigntoBharg" action="{!assignto}" reRender="load" />
+             </apex:pageBlockButtons>
+        	
+            <apex:pageBlockTable value="{!loan}" var="a">
+                <apex:column >
+                	<apex:inputCheckbox value="{!a.flag}"  />
+                    <apex:facet name="Header"><apex:inputCheckbox /> </apex:facet>
+                </apex:column>
+                <apex:column value="{!a.emps.Email__c}" />
+                <apex:column value="{!a.emps.Citynames__c}" />
+                <apex:column value="{!a.emps.State__c}" />
+                <apex:column value="{!a.emps.ownerId}" />
+                <apex:column value="{!a.emps.name}" />
+            </apex:pageBlockTable>
+          
+           </apex:pageBlock>
+    
+    </apex:form>
+    
+    
+</apex:page>

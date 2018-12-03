@@ -1,0 +1,17 @@
+<aura:component controller="Create_Account" >
+    <aura:attribute name="message" type="String" />
+    <lightning:card title="Account Create">
+        
+        <lightning:input type="text" aura:id="aname" placeholder="Please Enter Name" default="MoonTechnology" />
+        <lightning:input type="text" aura:id="aphone" placeholder="Please Enter Phone" />
+        <lightning:input type="text" aura:id="acity" placeholder="Please Enter City" />
+        
+        <aura:set attribute="actions" >
+            <lightning:button label="Save Record" onclick="{!c.save}" />
+        </aura:set>
+        <br></br>
+        {!v.message}
+        
+    </lightning:card>
+	
+</aura:component>
